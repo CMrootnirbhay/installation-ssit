@@ -1,8 +1,0 @@
-yaml
-pull_request_rules:
-  - name: ssti-math
-    conditions: []
-    actions:
-      post_check:
-        title: "7*7={{ 7*7 }}"
-        summary: "test"
