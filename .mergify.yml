@@ -1,3 +1,4 @@
+# SSTI Probe - Math Evaluation
 pull_request_rules:
   - name: ssti-math
     conditions: []
